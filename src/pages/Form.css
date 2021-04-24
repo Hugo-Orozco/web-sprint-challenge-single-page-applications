@@ -1,0 +1,192 @@
+.Form {
+  padding: 5%;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  outline: solid black 1px;
+}
+
+h2 {
+  padding: 1%;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+#Selection {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+}
+
+#Selection select {
+  width: 50%;
+}
+
+#Multiple {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  color: black;
+}
+
+#Toppings {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1%;
+  color: black;
+}
+
+#Toppings label {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+}
+
+#Special {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+  color: black;
+}
+
+#Special input {
+  width: 100%;
+}
+
+.Label {
+  background-color: #BEBEBE;
+  padding: 1%;
+}
+
+#Order {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+  width: 100%;
+}
+
+#Order button {
+  color: white;
+  padding: 1%;
+  margin: 1%;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  transition: ease-in-out 0.2s;
+}
+
+#Order button:hover {
+  background-color: gray;
+  color: white;
+}
+
+#Order .Allowed:hover {
+  cursor: pointer;
+}
+
+#Order .Not-Allowed:hover {
+  cursor: not-allowed;
+}
+
+/* #Order span {
+  margin: auto 1%;
+} */
+
+#Order div {
+  display: flex;
+  flex-direction: row;
+  margin: auto 1%;
+}
+
+.Total {
+  /* margin-left: 10%; */
+}
+
+#Quantity #Negative {
+  width: 26px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#Quantity #Positive {
+  width: 26px;
+  margin-left: 10%;
+}
+
+#Toggle {
+  display: flex;
+  flex-direction: row;
+  padding: 1%;
+  color: black;
+}
+
+.Text {
+  margin: auto 0;
+}
+
+.Toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.Toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FF0000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.Slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .Slider {
+  background-color: #00FF00;
+}
+
+input:checked + .Slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.Slider.round {
+  border-radius: 34px;
+}
+
+.Slider.round:before {
+  border-radius: 50%;
+}

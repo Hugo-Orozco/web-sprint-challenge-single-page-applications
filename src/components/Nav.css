@@ -1,0 +1,23 @@
+.Nav {
+  background-color: black;
+  color: white;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Nav h1 {
+  padding: 1%;
+}
+
+.Nav a {
+  padding: 1%;
+  background-color: white;
+  color: black;
+  transition: ease-in-out 0.2s;
+}
+
+.Nav a:hover {
+  background-color: gray;
+  color: white;
+}
